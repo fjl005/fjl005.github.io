@@ -1,0 +1,146 @@
+<!-- For set up, in terminal first enter "npm init" then "npm install lite-server --sav-dev". Then, modify the package.json file. Set up a .gitignore with the node_modules included in it.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+
+  <!-- Additional CSS must be placed after Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <title>Frank's Page</title>
+</head>
+
+<body>
+  <!-- Inside the header, I'll include the jumbotron -->
+  <header>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Welcome!</h1>
+        <p class="lead">Thanks for making it to my page. I hope that you learn something about me and that our paths may
+          cross one day.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Immediately after the header / jumbotron, I'll include a navbar to help navigate through the page -->
+
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <!-- <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+
+  <!-- Breadcrumbs -->
+  <div class="col">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    </ol>
+  </div>
+
+  <!-- Page content -->
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="media">
+        <div class="col col-lg-4">
+          <a href="https://nps.gov/cabr/index.htm" target="_blank">
+            <img src="images/picOfFrank.png" alt="Picture of Frank a Handsome Man" height="350rem"
+              class="animate__animated animate__fadeInLeft img-responsive" data-toggle="tooltip"
+              title="It's me! Taken from San Cabrillo National Monument in San Diego." data-placement="bottom" />
+          </a>
+        </div>
+
+
+        <div class="media-body align-self-center ml-3 col col-lg-8">
+          <h2 class="animate__animated animate__fadeInUp">Hi, I'm Frank. I'm a Full-Stack Web Developer.</h2> <br />
+          <p class="animate__animated animate__fadeInUp">I attended Nucamp's Full Stack Bootcamp Course in addition to
+            self-studying and personal project work. <br /> <br />
+
+            My skills include (but are most definitely <em>not limited to</em>) <strong>HTML, CSS, JavaScript,
+              Bootstrap.</strong> <br /> <br />
+
+            Don't see a skill you were looking for? No worries; I'm a quick, eager learner and am motivated to always
+            improve and be better! </p>
+        </div>
+      </div>
+    </div>
+
+
+    <br /> <br />
+    <div class="row">
+      <div class="col">
+        <h2 class="animate__animated animate__fadeInUp">Prior to Web Development, I was working as a Study Director.
+        </h2>
+        <p class="animate__animated animate__fadeInUp">I graduated from <a href="https://www.ucsd.edu"
+            target="_blank">University of California, San Diego</a>, with a Master's in Biology in 2020, and a
+          Bachelor's in Physiology and Neuroscience in 2018. <br /> <br />
+
+          Since graduating, I have worked at <a href="https://www.crownbio.com" target="_blank">Crown Bioscience</a> for
+          three years. <br /> <br />
+
+          I started as a Study Coordinator and worked my way up to a Study Director. <br /> <br />
+
+          Although the work has been great, deep down my passion lies in the technology industry. As an avid coder, I
+          know that web development is the path in which I can truly grow and be my best self.
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+
+  </footer>
+
+  <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // For Tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+
+</body>
+
+</html>
