@@ -64,19 +64,43 @@
 
     <div class="container">
         <div class="row">
-            <div class="col">
-                <h2>Contact</h2>
+            <h2 class="col">Enter Your Contact Info</h2>
+        </div>
 
-                <div class="col mx-auto">
-                    <form id="contactInput">
-                        <div class="row form-group">
+        <div class="row">
 
-                            <label class="col col-form-label" for="name">Name</label>
-                            <input class="form-control" type="text" id="name" placeholder="name"/>
+            <div class="col mx-auto">
+                <form id="contactInput">
+                    <div class="row form-group">
+                        <label class="col col-sm-2 col-form-label" for="name">Name</label>
+                        <input class="col col-sm-4 form-control" name="name" type="text" id="name" placeholder="Name" />
+                    </div>
 
+                    <div class="row form-group">
+                        <label class="col col-sm-2 col-form-label" for="email">Email</label>
+                        <input class="col col-sm-4 form-control" type="email" name="email" id="email"
+                            placeholder="Email" />
+                    </div>
 
-                    </form>
-                </div>
+                    <div class="row form-group">
+                        <label class="col col-sm-2 col-form-label" for="phoneNumber">Phone Number</label>
+                        <input class="col col-sm-4 form-control" type="text" name="phoneNumber" id="phoneNumber"
+                            placeholder="Phone Number" />
+                    </div>
+
+                    <div class="row form-group">
+                        <label class="col col-sm-2 col-form-label" for="yourMessage">Leave a Message</label>
+                        <textarea class="col col-sm-4" id="yourMessage" name="yourMessage" rows="8" cols="50"
+                            placeholder="Enter Message Here"></textarea>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col">
+                            <button type="submit" class="btn bg-primary text-white">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>
@@ -84,12 +108,15 @@
 
 
 
-    </header>
-
     <footer>
 
 
     </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 
