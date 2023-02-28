@@ -206,3 +206,10 @@ footer {
   max-height: 100%;
   max-width: 100%;
 }
+
+#carouselButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
