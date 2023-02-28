@@ -201,3 +201,8 @@ footer {
 .carousel-caption h5 {
   font-size: calc(25px + 0.5vw);
 }
+
+.frankAboutMePic {
+  max-height: 100%;
+  max-width: 100%;
+}
