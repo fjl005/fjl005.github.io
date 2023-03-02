@@ -19,14 +19,8 @@ nav {
   color: white;
 }
 
-.breadcrumb {
-  background-color: black;
-  color: white;
-}
-
 .card {
   color: white;
-  ;
   background-color: black;
   border-color: rgb(100, 100, 100);
 }
@@ -164,19 +158,14 @@ nav {
 
 .carousel {
   width: max-width;
-  height: 50rem;
+  height: 45rem;
 }
 
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  width:100%;
-  left: 0;
-}
-
-.downtownImage {
-  height: 45rem;
   width: 100%;
+  left: 0;
 }
 
 footer {
@@ -188,7 +177,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   object-fit: cover;
-  width: 100%;
+  width: 70%;
 }
 
 .carousel-caption p {
@@ -203,8 +192,7 @@ footer {
 }
 
 .frankAboutMePic {
-  max-height: 100%;
-  max-width: 100%;
+  max-width: 70%;
 }
 
 #carouselButton {
@@ -213,3 +201,12 @@ footer {
   bottom: 0;
   z-index: 100;
 }
+/* 
+footer input, textarea {
+  margin: 0 auto;
+  max-width: 40vw;
+}
+
+footer label {
+
+} */

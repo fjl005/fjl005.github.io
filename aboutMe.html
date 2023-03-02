@@ -22,22 +22,22 @@
   <header>
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Let's Get to Know Me!</h1>
-        <p class="lead">I'm not that interesting, so I'll try to not bore you too much.</p>
+      <div class="container-fluid">
+        <h1 class="display-4 text-center">Let's Get to Know Me!</h1>
+        <p class="lead text-center">I'm not that interesting, so I'll try to not bore you too much.</p>
       </div>
     </div>
   </header>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-sm navbar-dark">
-    <div class="container">
+    <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mx-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
@@ -60,8 +60,10 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <img src="images/desertFrank.jpg" alt="Picture of Frank a Handsome Man" 
-          class="mx-auto animate__animated animate__fadeInRight img-responsive frankAboutMePic" />
+        <img src="images/desertFrank.jpg" alt="Picture of Frank a Handsome Man"
+          class="mx-auto d-block animate__animated animate__fadeInUp img-responsive frankAboutMePic" />
+
+
       </div>
     </div>
     <br />
@@ -87,7 +89,7 @@
   <div class="container py-5">
     <div class="main-timeline">
       <div class="timeline left">
-        <div class="card">
+        <div class="card animate__animated">
           <div class="card-body p-4">
             <h3 class="text-center">2023 (Present) - The Transition to Tech</h3>
             <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
@@ -97,7 +99,7 @@
         </div>
       </div>
       <div class="timeline right">
-        <div class="card">
+        <div class="card animate__animated" id="secondCard">
           <div class="card-body p-4">
             <h3 class="text-center">Apr 2020 to 2023 (Present) - Working at Crown</h3>
             <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
@@ -107,7 +109,7 @@
         </div>
       </div>
       <div class="timeline left">
-        <div class="card">
+        <div class="card animate__animated" id="thirdCard">
           <div class="card-body p-4">
             <h3 class="text-center">Jan 2019 to Mar 2020 - Masters Program</h3>
             <p class="mb-0">As a dedicated Research Assistant in the Kauffman Lab, I sought an opportunity to further my
@@ -120,7 +122,7 @@
       </div>
       <div class="timeline right">
         <div class="card">
-          <div class="card-body p-4">
+          <div class="card-body p-4" id="fourthCard">
             <h3 class="text-center">Sep 2014 to Dec 2018 - Bachelors Program</h3>
             <p class="mb-0">I miraculously got accepted to the great University of California, San Diego! I was truly
               blessed by the year-round sunny weather, amazing Mexican food, and beautiful beaches that were a little
@@ -155,42 +157,43 @@
 
   </header>
 
-  <footer class="bg-secondary">
+  
+  <footer>
     <br />
     <div class="container">
       <div class="row">
         <div class="col">
-          <h2>Want to get in touch? Leave your contact info below!</h2>
+          <h2 class="text-center">Want to get in touch? Leave your contact info below!</h2>
           <br />
-          <form id="contactInput">
-            <div class="row form-group">
+          <form id="contactInput" class="">
+            <div class="row form-group justify-content-center">
               <label class="col-sm-2 col-form-label" for="name">Name:</label>
               <input class="col-sm-6 form-control" name="name" type="text" id="name" placeholder="Name" />
             </div>
 
-            <div class="row form-group">
+            <div class="row form-group justify-content-center">
               <label class="col-sm-2 col-form-label" for="email">Email:</label>
               <input class="col-sm-6 form-control" type="email" name="email" id="email" placeholder="Email" />
             </div>
 
-            <div class="row form-group">
+            <div class="row form-group justify-content-center">
               <label class="col-sm-2 col-form-label" for="phoneNumber">Phone Number:</label>
               <input class="col-sm-6 form-control" type="text" name="phoneNumber" id="phoneNumber"
                 placeholder="Phone Number" />
             </div>
 
-            <div class="row form-group">
+            <div class="row form-group justify-content-center">
               <label class="col-sm-2 col-form-label" for="yourMessage">Leave a Message:</label>
               <textarea class="col-sm-6" id="yourMessage" name="yourMessage" rows="8" cols="50"
                 placeholder="Enter Message Here"></textarea>
             </div>
 
-            <div class="row form-group">
-              <div class="col">
-                <button type="submit" class="btn bg-primary text-white">Submit</button>
+
+            <div class="row from-group justify-content-center">
+              <div class="col-sm-8">
+                <button type="submit" class="btn bg-primary text-white align-items-baseline">Submit</button>
               </div>
             </div>
-
           </form>
         </div>
       </div>
@@ -201,6 +204,44 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script>
+
+    // Trying to add a scroll event to trigger the timeline animation when scrolling
+    // First, create the observer
+    const observerLeft = new IntersectionObserver(entries => {
+      // When the callback function runs, it gives us an 'entries' array of the target elements we asked it to watch, from the observe code below this callback function.
+
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // This means that the element is visible, so we add the animation class here. 
+          // Note that entry is the object give to us by the observer, and entry.target is the actual element we are observing
+          entry.target.classList.add('animate__fadeInRight');
+        }
+      });
+    });
+
+    // Tell the oberver which elements to track.
+    observerLeft.observe(document.querySelector('.card'));
+    observerLeft.observe(document.querySelector('#thirdCard'));
+
+    const observerRight = new IntersectionObserver(entries => {
+      // When the callback function runs, it gives us an 'entries' array of the target elements we asked it to watch, from the observe code below this callback function.
+
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // This means that the element is visible, so we add the animation class here. 
+          // Note that entry is the object give to us by the observer, and entry.target is the actual element we are observing
+          entry.target.classList.add('animate__fadeInLeft');
+        }
+      });
+    });
+
+    // Tell the oberver which elements to track.
+    observerRight.observe(document.querySelector('#secondCard'));
+    observerRight.observe(document.querySelector('#fourthCard'));
+
+  </script>
 
 </body>
 

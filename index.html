@@ -25,9 +25,9 @@
   <!-- Inside the header, I'll include the jumbotron -->
   <header>
     <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Welcome!</h1>
-        <p class="lead">Thanks for making it to my page. I hope that you learn something about me and that our paths may
+      <div class="container-fluid">
+        <h1 class="display-4 text-center">Welcome!</h1>
+        <p class="lead text-center">Thanks for making it to my page. I hope that you learn something about me and that our paths may
           cross one day.</p>
       </div>
     </div>
@@ -36,13 +36,13 @@
   <!-- Immediately after the header/jumbotron, I'll include a navbar to help navigate through the page -->
 
   <nav class="navbar navbar-expand-sm navbar-dark">
-    <div class="container">
+    <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
@@ -68,8 +68,8 @@
     <div class="row">
       <div class="col-lg-4 text-center">
         <a href="https://nps.gov/cabr/index.htm" target="_blank">
-          <img src="images/picOfFrank.png" alt="Picture of Frank a Handsome Man" height="350rem"
-            class="mx-auto animate__animated animate__fadeInLeft img-responsive" data-toggle="tooltip"
+          <img src="images/picOfFrank.png" alt="Picture of Frank a Handsome Man" width="400px"
+            class="mx-auto animate__animated animate__fadeInLeft img-fluid" data-toggle="tooltip"
             title="It's me! Taken from San Cabrillo National Monument in San Diego." data-placement="bottom" />
         </a>
       </div>
@@ -96,7 +96,7 @@
         <div class="card animate__animated animate__fadeInUp">
           <div class="card-body">
             <h3 class="text-center">Although I come from a Biology background, my education and work experience have
-              developed me into a diligent, persistent worker eager to learn more!</h3>
+              developed me into a diligent, persistent worker who is proactive, productive, efficient, and always eager to learn more!</h3>
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@
               <img class="d-block w-100" src="images/boardGames.jpg" alt="Fourth slide">
               <div class="carousel-caption">
                 <h5>Board, Not Bored</h5>
-                <p>One of my hobbies includes playing board games! I love euro-style games and learning new games. I'd
+                <p>One of my hobbies includes playing board games! I love eurogames and learning new games. I'd
                   like to create an app for board games at some point in the future. Coming soon!</p>
               </div>
             </div>
@@ -201,42 +201,42 @@
   </div> -->
 
 
-  <footer class="bg-secondary">
+  <footer>
     <br />
     <div class="container">
       <div class="row">
         <div class="col">
-          <h2>Want to get in touch? Leave your contact info below!</h2>
+          <h2 class="text-center">Want to get in touch? Leave your contact info below!</h2>
           <br />
-          <form id="contactInput">
-            <div class="row form-group">
+          <form id="contactInput" class="">
+            <div class="row form-group justify-content-center">
               <label class="col-sm-2 col-form-label" for="name">Name:</label>
               <input class="col-sm-6 form-control" name="name" type="text" id="name" placeholder="Name" />
             </div>
 
-            <div class="row form-group">
+            <div class="row form-group justify-content-center">
               <label class="col-sm-2 col-form-label" for="email">Email:</label>
               <input class="col-sm-6 form-control" type="email" name="email" id="email" placeholder="Email" />
             </div>
 
-            <div class="row form-group">
+            <div class="row form-group justify-content-center">
               <label class="col-sm-2 col-form-label" for="phoneNumber">Phone Number:</label>
               <input class="col-sm-6 form-control" type="text" name="phoneNumber" id="phoneNumber"
                 placeholder="Phone Number" />
             </div>
 
-            <div class="row form-group">
+            <div class="row form-group justify-content-center">
               <label class="col-sm-2 col-form-label" for="yourMessage">Leave a Message:</label>
               <textarea class="col-sm-6" id="yourMessage" name="yourMessage" rows="8" cols="50"
                 placeholder="Enter Message Here"></textarea>
             </div>
 
-            <div class="row form-group">
-              <div class="col">
-                <button type="submit" class="btn bg-primary text-white">Submit</button>
+
+            <div class="row from-group justify-content-center">
+              <div class="col-sm-8">
+                <button type="submit" class="btn bg-primary text-white align-items-baseline">Submit</button>
               </div>
             </div>
-
           </form>
         </div>
       </div>
